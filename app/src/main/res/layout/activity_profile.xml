@@ -1,20 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/fondo_perfil_usuario"
+    android:padding="16dp"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="57dp"
+        android:layout_height="81dp"
+        android:layout_gravity="right"
+        app:srcCompat="@drawable/foto_perfil_usuario" />
 
     <TextView
+        android:id="@+id/titleText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
         android:text="Perfil de Usuario"
-        android:textSize="24sp" />
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:typeface="sans" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Datos de usuario"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:typeface="sans"
+        android:textSize="17sp"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center" />
 
     <Button
         android:id="@+id/logoutButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="Cerrar Sesión" />
+        android:layout_width="202dp"
+        android:layout_height="59dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="150dp"
+        android:backgroundTint="#165F65"
+        android:text="Cerrar Sesión"
+        android:typeface="sans" />
 
-</RelativeLayout>
+</LinearLayout>

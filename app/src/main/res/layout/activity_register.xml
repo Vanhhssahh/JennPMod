@@ -1,48 +1,141 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fondo_login"
     android:padding="16dp">
 
-    <EditText
-        android:id="@+id/usernameRegister"
-        android:layout_width="match_parent"
+    <ImageView
+        android:id="@+id/ivMascotaRegister1"
+        android:layout_width="66dp"
+        android:layout_height="128dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/mascota_jenpmod" />
+
+    <TextView
+        android:id="@+id/tvCrearCuenta"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Nombre de usuario" />
+        android:text="CREAR UNA CUENTA"
+        android:textSize="29sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/ivMascotaRegister1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
-        android:id="@+id/emailRegister"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/usernameRegister"
-        android:layout_marginTop="16dp"
+        android:id="@+id/etNombreUsuarioRegister"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:hint="Nombre de usuario"
+        app:layout_constraintTop_toBottomOf="@+id/tvCrearCuenta"
+        app:layout_constraintStart_toEndOf="@+id/ivIconoUsuario"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivIconoUsuario"
+        android:layout_width="26dp"
+        android:layout_height="25dp"
+        app:layout_constraintTop_toBottomOf="@+id/tvCrearCuenta"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/icono_usuario_login" />
+
+    <EditText
+        android:id="@+id/etCorreoUsuarioRegister"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
         android:hint="Correo electrónico"
-        android:inputType="textEmailAddress" />
+        android:inputType="textEmailAddress"
+        app:layout_constraintTop_toBottomOf="@+id/etNombreUsuarioRegister"
+        app:layout_constraintStart_toEndOf="@+id/ivIconoCorreo"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivIconoCorreo"
+        android:layout_width="28dp"
+        android:layout_height="27dp"
+        app:layout_constraintTop_toBottomOf="@+id/etNombreUsuarioRegister"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/icono_correo_login" />
 
     <EditText
-        android:id="@+id/passwordRegister"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/emailRegister"
-        android:layout_marginTop="16dp"
+        android:id="@+id/etContrasenaUsuarioRegister"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
         android:hint="Contraseña"
-        android:inputType="textPassword" />
+        android:inputType="textPassword"
+        app:layout_constraintTop_toBottomOf="@+id/etCorreoUsuarioRegister"
+        app:layout_constraintStart_toEndOf="@+id/ivIconoContrasena"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivIconoContrasena"
+        android:layout_width="28dp"
+        android:layout_height="25dp"
+        app:layout_constraintTop_toBottomOf="@+id/etCorreoUsuarioRegister"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/icono_contrasena_login" />
 
     <EditText
-        android:id="@+id/confirmPasswordRegister"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/passwordRegister"
-        android:layout_marginTop="16dp"
+        android:id="@+id/etConfirmarContrasenaUsuarioRegister"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
         android:hint="Confirmar contraseña"
-        android:inputType="textPassword" />
+        android:inputType="textPassword"
+        app:layout_constraintTop_toBottomOf="@+id/etContrasenaUsuarioRegister"
+        app:layout_constraintStart_toEndOf="@+id/ivIconoConfirmarContrasena"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivIconoConfirmarContrasena"
+        android:layout_width="31dp"
+        android:layout_height="27dp"
+        app:layout_constraintTop_toBottomOf="@+id/etContrasenaUsuarioRegister"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/icono_contrasena_login" />
 
     <Button
-        android:id="@+id/registerButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/confirmPasswordRegister"
-        android:layout_marginTop="16dp"
-        android:text="Registrarse" />
+        android:id="@+id/btnCrearCuenta"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:backgroundTint="#146065"
+        android:text="CREAR CUENTA"
+        android:textSize="18sp"
+        android:typeface="sans"
+        app:layout_constraintTop_toBottomOf="@+id/etConfirmarContrasenaUsuarioRegister"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-</RelativeLayout>
+    <Button
+        android:id="@+id/btnIngresar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#00FFFFFF"
+        android:text="Ingresar"
+        android:textColor="#01685F"
+        android:textStyle="italic"
+        app:layout_constraintTop_toBottomOf="@+id/btnCrearCuenta"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tvYaTienesCuenta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¿Ya tienes una cuenta?"
+        app:layout_constraintTop_toBottomOf="@+id/btnIngresar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivMascotaRegister2"
+        android:layout_width="80dp"
+        android:layout_height="110dp"
+        app:layout_constraintTop_toBottomOf="@+id/tvYaTienesCuenta"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/mascota_jenpmod" />
+</androidx.constraintlayout.widget.ConstraintLayout>

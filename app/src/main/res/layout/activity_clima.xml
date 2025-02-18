@@ -1,14 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/fondo_clima"
     android:padding="16dp">
 
+    <!-- Para mejorar la experiencia del usuario, se integrará una API de clima que mostrará en tiempo real el estado del
+    clima y la temperatura actual de la ciudad donde se encuentra el usuario.
+    La aplicación utilizará los servicios de geolocalización del dispositivo para obtener la ubicación
+    del usuario y, con esta información, consultará una API gratuita de datos meteorológicos. La API seleccionada
+    deberá proporcionar datos como la temperatura actual y el estado del clima (soleado, lluvioso,
+    nublado, etc.), los cuales serán procesados y mostrados en la interfaz en la seccion de revisar el clima de la aplicación.
+
+    Esta funcionalidad permitirá a los estudiantes conocer el clima de su ubicación directamente desde JennPMod,
+    facilitando la planificación de su día estudiantil y preparandolos para la cituacion climatica
+    ejemplo, salir con una sombrilla de sus casas!!!. -->
+
+
     <TextView
+        android:id="@+id/tvSaludoUsuarioClima"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Revisar el Clima"
-        android:textSize="24sp"
-        android:layout_centerHorizontal="true"/>
+        android:layout_marginTop="80dp"
+        android:text="Buen dia!"
+        android:textSize="29sp"
+        android:textStyle="bold"
+        android:typeface="sans"
+        app:layout_constraintBottom_toTopOf="@+id/tvEsteEsElClimaHoy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.012" />
 
-</RelativeLayout>
+    <TextView
+        android:id="@+id/tvEsteEsElClimaHoy"
+        android:layout_width="315dp"
+        android:layout_height="74dp"
+        android:text="Este es el clima hoy en tu ciudad"
+        android:textAlignment="center"
+        android:textSize="29sp"
+        android:textStyle="bold"
+        android:typeface="sans"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.898" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
