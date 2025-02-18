@@ -1,4 +1,8 @@
 package planner.jenn.jennpmod;
+//ESTUDIANTE: Jennifer Vanessa Organista Paz
+//ID: 785957
+
+
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -18,6 +22,12 @@ public class MainActivity extends AppCompatActivity {
         Button notasButton = findViewById(R.id.notasButton);
         Button climaButton = findViewById(R.id.climaButton);
         Button profileButton = findViewById(R.id.profileButton);
+
+
+
+
+
+
 
         horarioButton.setOnClickListener(new View.OnClickListener() {
             @Override

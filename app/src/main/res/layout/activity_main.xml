@@ -1,48 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/fondo_inicio_app"
     android:padding="16dp">
 
     <Button
         android:id="@+id/profileButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
+        android:layout_width="78dp"
+        android:layout_height="74dp"
         android:layout_marginTop="16dp"
-        android:layout_marginBottom="20dp"
-        android:text="Perfil" />
+        android:text="."
+        android:backgroundTint="#00FFFFFF"
+        android:drawableBottom="@drawable/imagen_perfil_inicio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/horarioButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/profileButton"
-        android:text="Mi Horario de Clases" />
+        android:layout_width="184dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="44dp"
+        android:backgroundTint="#165F66"
+        android:text="Mi Horario de Clases"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profileButton" />
 
     <Button
         android:id="@+id/recordatoriosButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/horarioButton"
-        android:layout_marginTop="16dp"
-        android:text="Mis Recordatorios" />
+        android:layout_width="186dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="52dp"
+        android:backgroundTint="#870E54"
+        android:text="Mis Recordatorios"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/horarioButton" />
 
     <Button
         android:id="@+id/notasButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/recordatoriosButton"
-        android:layout_marginTop="16dp"
-        android:text="Mis Notas" />
+        android:layout_width="187dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="96dp"
+        android:backgroundTint="#419744"
+        android:text="Mis Notas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.375"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/recordatoriosButton" />
 
     <Button
         android:id="@+id/climaButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/notasButton"
-        android:layout_marginTop="16dp"
-        android:text="Revisar el Clima" />
+        android:layout_width="176dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="52dp"
+        android:backgroundTint="#023A35"
+        android:text="Revisar el Clima"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/notasButton" />
 
-
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

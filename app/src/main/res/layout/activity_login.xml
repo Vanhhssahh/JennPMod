@@ -1,39 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/fondo_login"
+    android:padding="16dp"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".LoginActivity">
 
-    <EditText
-        android:id="@+id/emailLogin"
+    <ImageView
+        android:id="@+id/ivMascotaLogin1"
+        android:layout_width="322dp"
+        android:layout_height="250dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="2dp"
+        android:src="@drawable/mascota_jenpmod" />
+
+    <TextView
+        android:id="@+id/tviniciarSesion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="INICIAR SESION"
+        android:textSize="29sp"
+        android:textStyle="bold"
+        android:typeface="sans"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/ivIconoCorreoLogin"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:srcCompat="@drawable/icono_correo_login" />
+
+        <EditText
+            android:id="@+id/correoLogin"
+            android:layout_width="260dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="48dp"
+            android:foregroundTint="#009688"
+            android:hint="Correo electrónico"
+            android:inputType="textEmailAddress"
+            android:textColor="#146065" />
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Correo electrónico"
-        android:inputType="textEmailAddress" />
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="20dp">
 
-    <EditText
-        android:id="@+id/passwordLogin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/emailLogin"
-        android:layout_marginTop="16dp"
-        android:hint="Contraseña"
-        android:inputType="textPassword" />
+        <ImageView
+            android:id="@+id/ivIconoContraseñaLogin"
+            android:layout_width="36dp"
+            android:layout_height="35dp"
+            app:srcCompat="@drawable/icono_contrasena_login" />
+
+        <EditText
+            android:id="@+id/contraseñaLogin"
+            android:layout_width="272dp"
+            android:layout_height="56dp"
+            android:hint="Contraseña"
+            android:inputType="textPassword"
+            android:layout_marginLeft="8dp" />
+    </LinearLayout>
 
     <Button
         android:id="@+id/loginButton"
-        android:layout_width="match_parent"
+        android:layout_width="232dp"
+        android:layout_height="55dp"
+        android:backgroundTint="#146065"
+        android:text="INGRESAR"
+        android:textSize="18sp"
+        android:typeface="sans"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center" />
+
+    <TextView
+        android:id="@+id/tvtienesCuenta"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/passwordLogin"
-        android:layout_marginTop="16dp"
-        android:text="Iniciar Sesión" />
+        android:text="No tienes una cuenta aun?"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center" />
 
     <Button
-        android:id="@+id/registerButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/loginButton"
-        android:layout_marginTop="16dp"
-        android:text="Registrarse" />
+        android:id="@+id/btnCrearCuenta"
+        android:layout_width="142dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="7dp"
+        android:backgroundTint="#00146065"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:text="Registrarse"
+        android:textColor="#083B42"
+        android:textSize="18sp"
+        android:textStyle="bold|italic"
+        android:typeface="sans"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etConfirmarContrasenaUsuarioRegister"
+        app:layout_constraintVertical_bias="0.02" />
 
-</RelativeLayout>
+
+    <ImageView
+        android:id="@+id/ivMascotaLogin2"
+        android:layout_width="72dp"
+        android:layout_height="89dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/mascota_jenpmod" />
+
+</LinearLayout>
