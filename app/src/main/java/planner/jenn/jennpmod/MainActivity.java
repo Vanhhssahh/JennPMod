@@ -2,8 +2,6 @@ package planner.jenn.jennpmod;
 //ESTUDIANTE: Jennifer Vanessa Organista Paz
 //ID: 785957
 
-
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
